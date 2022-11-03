@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Website - Diana Rus</title>
+
+    <!--------------- Scroll Reveal --------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--------------- CSS ----------------->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!--------------- Font Awesome ----------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--------------- Header ----------------->
+    <header id="header">
+      <div class="container">
+        <nav>
+          <img
+            class="logo"
+            src="./assets/images/LOGO-DianaRus.png"
+            alt="logo"
+          />
+          <ul id="side-menu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark fas" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars fas" onclick="openMenu()"></i>
+        </nav>
+
+        <div class="header-description">
+          <p>Engineer</p>
+          <h2>Hi, I am</h2>
+          <h1>Diana Rus</h1>
+        </div>
+      </div>
+    </header>
+
+    <!--------------- Main ----------------->
+    <main>
+      <!--------------- About Me ----------------->
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="subtitle">About Me</h2>
+          <p class="about-description">
+            I am an engineer with web and software development skills. Also, I
+            am a solution and design oriented person with an eye for detail who
+            wants to build a career in IT. My greatest quality is that I don't
+            give up until I get what I want.
+          </p>
+
+          <!--------------- Tab Titles ----------------->
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="openTab('experience')">
+              Experience
+            </p>
+            <p class="tab-links" onclick="openTab('education')">Education</p>
+            <p class="tab-links" onclick="openTab('skills')">Skills</p>
+          </div>
+
+          <!--------------- Experience Tab ----------------->
+          <div class="tab-contents active-tab" id="experience">
+            <ul>
+              <li>
+                <span>CAD Specialist</span>
+                <p>
+                  ART TU Cluj-Napoca/Formula Student Team<br />
+                  <i>volunteering</i> <br />Suspension Department <br />
+                  <small>oct. 2020 - jul. 2022</small>
+                </p>
+              </li>
+              <li>
+                <span>Engineering Student in Practice</span>
+                <p>
+                  S.C. Pehart Tec Grup S.A. Dej <br />
+                  <i>internship</i> <br />
+                  Production Engineering Department <br />
+                  <small>jul. 2019 - aug. 2019</small>
+                </p>
+              </li>
+              <li>
+                <span>Engineering Student in Practice</span>
+                <p>
+                  Fujikura Automotive Romania <br />
+                  <i>internship</i> <br />
+                  Production Engineering Department <br />
+                  <small>jun. 2018 - jul. 2018</small>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!--------------- Education Tab ----------------->
+          <div class="tab-contents" id="education">
+            <ul>
+              <li>
+                <span>Master's Degree</span><br />
+                <p>
+                  <i>Computer Aided Design of Manufacturing Systems</i><br />
+                  Technical University of Cluj-Napoca <br />
+                  <small>2020 - 2022</small>
+                </p>
+              </li>
+              <li>
+                <span>Engineering's Degree</span><br />
+                <p>
+                  <i>Robotics</i> <br />
+                  Technical University of Cluj-Napoca <br />
+                  <small>2016 - 2020</small>
+                </p>
+              </li>
+              <li>
+                <span>High School</span><br />
+                <p>
+                  <i>Mathematics - Computer Science intensive profile</i><br />
+                  Andrei Muresanu National College Dej <br />
+                  <small>2012 - 2016</small>
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <!--------------- Skills Tab ----------------->
+          <div class="tab-contents" id="skills">
+            <ul>
+              <li>
+                <span>Personal</span><br />learning skills
+                <span>&#9679;</span> communication skills
+                <span>&#9679;</span> teamwork <span>&#9679;</span> open-minded
+              </li>
+              <li>
+                <span>Frontend Web Development</span><br />
+                HTML <span>&#9679;</span> CSS <span>&#9679;</span> Bootstrap
+                <span>&#9679;</span> JavaScript
+              </li>
+              <li>
+                <span>Programming languages</span><br />
+                C++ <span>&#9679;</span> C <span>&#9679;</span> C#
+              </li>
+              <li>
+                <span>Others</span><br />algorithms <span>&#9679;</span> OOP
+                <span>&#9679;</span> responsive web design
+                <span>&#9679;</span> Visual Studio Code
+                <span>&#9679;</span> Microsoft Office <span>&#9679;</span> Adobe
+                Illustrator
+              </li>
+              <li>
+                <span>Languages</span><br />Romanian
+                <span>&#9679;</span> English <span>&#9679;</span>
+                French
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!--------------- Portfolio ----------------->
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <h2 class="subtitle">Portfolio</h2>
+
+          <!--------------- Portfolio List ----------------->
+          <div class="portfolio-list">
+            <div class="portfolio-item">
+              <img src="./assets/images/project-1.jpg" alt="project-1" />
+
+              <div class="layer">
+                <h3>Restaurant Website</h3>
+                <p>
+                  Website for presenting products and services of a pie
+                  restaurant
+                </p>
+                <p class="layer-tech">HTML, CSS, JavaScript</p>
+
+                <!--------------- Links for GitHub project and LIVE DEMO ----------------->
+                <div class="layer-links">
+                  <a
+                    href="https://github.com/RusDiana97/restaurant-website.github.io"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://rusdiana97.github.io/restaurant-website.github.io/"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="./assets/images/project-2.jpg" alt="project-2" />
+
+              <div class="layer">
+                <h3>Movie Website</h3>
+                <p>Website for presenting films, series, documentaries</p>
+                <p class="layer-tech">HTML, CSS, JavaScript</p>
+
+                <!--------------- Links for GitHub project and LIVE DEMO ----------------->
+                <div class="layer-links">
+                  <a
+                    href="https://github.com/RusDiana97/lets-movie.github.io"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://rusdiana97.github.io/lets-movie.github.io/"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item">
+              <img src="./assets/images/project-3.jpg" alt="project-3" />
+
+              <div class="layer">
+                <h3>Shop Website</h3>
+                <p>
+                  Website for presentation and purchase of products for a coffee
+                  shop
+                </p>
+                <p class="layer-tech">HTML, CSS, BootStrap, JavaScript</p>
+
+                <!--------------- Links for GitHub project and LIVE DEMO ----------------->
+                <div class="layer-links">
+                  <a
+                    href="https://github.com/RusDiana97/coffee-shop.github.io"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://rusdiana97.github.io/coffee-shop.github.io/"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--------------- See More Projects Button ----------------->
+          <a href="https://github.com/RusDiana97" class="btn" target="_blank"
+            >See more</a
+          >
+        </div>
+      </section>
+
+      <!--------------- Contact ----------------->
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="subtitle">Contact Me</h2>
+
+          <!--------------- Contact Links ----------------->
+          <div class="contact-col">
+            <p>Diana Rus</p>
+            <a href="mailto:russ.dianav@gmail.com"
+              ><i class="fa-solid fa-envelope"></i>russ.dianav@gmail.com</a
+            >
+            <a href="https://www.linkedin.com/in/rus-diana/"
+              ><i class="fa-brands fa-linkedin"></i>LinkedIn</a
+            >
+            <a href="https://github.com/RusDiana97"
+              ><i class="fa-brands fa-github"></i>GitHub</a
+            >
+            <p>
+              <i class="fa-solid fa-location-dot"></i>Dej, Cluj County, Romania
+            </p>
+
+            <div class="contact-download-cv">
+              <a href="./assets/CV/RusDiana_CV_EN_no-phone-contact.pdf" download
+                ><i class="fa-solid fa-download"></i>Download my CV</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--------------- JS ----------------->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
