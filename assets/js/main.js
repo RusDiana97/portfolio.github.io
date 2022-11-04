@@ -39,7 +39,7 @@ const scrollRev = ScrollReveal({
 });
 
 scrollRev.reveal(
-  `.header-description, .subtitle, .about, .tab-titles, .portfolio-list, .btn, .contact-col`,
+  `.my-photo, .header-description, .about, .portfolio, .contact`,
   {
     interval: 200,
   }
