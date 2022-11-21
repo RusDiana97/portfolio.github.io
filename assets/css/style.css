@@ -5,7 +5,6 @@
 :root {
   /* -------- Colors -------- */
   --background-color: #050405;
-  --background-color-form: #292729;
   --first-color: #ffc15e;
   --text-color: #fff;
 
@@ -189,6 +188,22 @@ nav ul li a:hover {
   margin-bottom: 1.5rem;
 }
 
+.scroll-top {
+  right: 1rem;
+  position: fixed;
+  bottom: 5%;
+  z-index: 1;
+}
+
+.scroll-top i {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.277);
+}
+
+.scroll-top i:hover {
+  color: var(--first-color);
+}
+
 /*-------- === SECTIONS === --------*/
 /* -------- About me -------- */
 .about {
@@ -197,6 +212,7 @@ nav ul li a:hover {
 
 .about-description {
   font-size: var(--normal-font-size);
+  text-align: justify;
 }
 
 .tab-titles {
@@ -418,19 +434,6 @@ nav .fas {
 /* --------- === MEDIA QUERY === --------- */
 /* --------- CSS for Small Screens --------- */
 @media screen and (max-width: 900px) {
-  /*header {
-    background-image: url(/assets/images/DianaRus-1.png);
-  }
-
-  .header-description {
-    margin-top: 60%;
-  }
-
-  .header-description p {
-    margin-top: 12rem;
-    margin-bottom: 0.2rem;
-  }*/
-
   .cont {
     flex-direction: column-reverse;
     align-items: center;
@@ -486,6 +489,6 @@ nav .fas {
   }
 
   .tab-links {
-    margin-right: 1rem;
+    margin-right: 0.5rem;
   }
 }
