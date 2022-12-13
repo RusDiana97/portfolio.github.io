@@ -73,9 +73,6 @@ a {
 header {
   width: 100%;
   height: 100vh;
-  /*background: url("/DianaRus.png");
-  background-size: cover;
-  background-position: center;*/
 }
 
 /* -------- CSS Classes -------- */
@@ -275,9 +272,10 @@ nav ul li a:hover {
 
 .portfolio-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  grid-template-columns: repeat(2, 500px);
+  grid-gap: 30px;
   margin-top: 50px;
+  justify-content: center;
 }
 
 .portfolio-item {
@@ -490,5 +488,9 @@ nav .fas {
 
   .tab-links {
     margin-right: 0.5rem;
+  }
+
+  .portfolio-list {
+    grid-template-columns: repeat(1, 350px);
   }
 }
