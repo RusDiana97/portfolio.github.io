@@ -12,25 +12,25 @@
   --body-font: "Poppins", sans-serif;
   --name-font: "Allura", cursive;
   --biggest-font-size: 2rem;
-  --h1-font-size: 1.7rem;
-  --h2-font-size: 1.2rem;
-  --h3-font-size: 1.1rem;
-  --h4-font-size: 1rem;
-  --normal-font-size: 0.9rem;
-  --small-font-size: 0.7rem;
+  --h1-font-size: 1.9rem;
+  --h2-font-size: 1.8rem;
+  --h3-font-size: 1.3rem;
+  --h4-font-size: 1.2rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.8rem;
   --smaller-font-size: 0.7rem;
 
   /* -------- Margins -------- */
   --mb: 2rem;
 }
 
-@media screen and (min-width: 900px) {
+@media (width > 900px) {
   :root {
     --biggest-font-size: 6rem;
     --h1-font-size: 5rem;
     --h2-font-size: 3rem;
-    --h3-font-size: 1.5rem;
-    --h4-font-size: 1.3rem;
+    --h3-font-size: 2rem;
+    --h4-font-size: 1.5rem;
     --normal-font-size: 1rem;
   }
 }
@@ -100,14 +100,21 @@ header {
   margin-bottom: var(--mb);
   text-align: center;
   letter-spacing: 0.1rem;
+  transform: scale(0.9);
+  transition: 0.6s ease all;
+}
+
+.subtitle:hover {
+  transform: translateY(-50px) scale(1);
 }
 
 .btn {
-  background-color: #ffc15e;
+  background-color: #ffc15ea1;
+  color: rgba(255, 255, 255, 0.505);
   display: block;
   margin: 2rem auto;
   width: fit-content;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 3rem;
   letter-spacing: 0.1rem;
   font-weight: 500;
   font-size: var(--normal-font-size);
@@ -115,7 +122,8 @@ header {
 }
 
 .btn:hover {
-  transform: scale(0.9);
+  background-color: #ffc15e;
+  color: #fff;
 }
 
 /* -------- Header -------- */
@@ -360,6 +368,99 @@ nav ul li a:hover {
   height: 100%;
 }
 
+.btn-more {
+  padding: 0;
+  margin: 2rem auto;
+  border: none;
+  background: none;
+  display: block;
+  width: fit-content;
+  letter-spacing: 0.1rem;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+
+.btn-more {
+  color: #fff;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn-more p {
+  margin: 0;
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 300;
+}
+
+.btn-more::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: #ffc15e;
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.btn-more p::before {
+  position: absolute;
+  content: "See More";
+  width: 0%;
+  inset: 0;
+  color: #ffc15e;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.btn-more:hover::after {
+  width: 100%;
+}
+
+.btn-more:hover p::before {
+  width: 100%;
+}
+
+.btn-more:hover svg {
+  transform: translateX(4px);
+  color: #ffc15e;
+  font-weight: 300;
+}
+
+.btn-more svg {
+  color: #fff;
+  transition: 0.2s;
+  position: relative;
+  width: 15px;
+  transition-delay: 0.2s;
+}
+
+.portfolio-title {
+  font-size: var(--h3-font-size);
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  letter-spacing: 0.1rem;
+}
+
+.software-testing-projects-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
 /* --------- Contact --------- */
 .contact {
   padding: 5rem 0 2rem 0;
@@ -431,7 +532,7 @@ nav .fas {
 
 /* --------- === MEDIA QUERY === --------- */
 /* --------- CSS for Small Screens --------- */
-@media screen and (max-width: 900px) {
+@media (width < 900px) {
   .cont {
     flex-direction: column-reverse;
     align-items: center;
@@ -487,10 +588,41 @@ nav .fas {
   }
 
   .tab-links {
-    margin-right: 0.5rem;
+    margin-right: 2rem;
   }
 
   .portfolio-list {
     grid-template-columns: repeat(1, 350px);
+  }
+}
+
+@media (width < 500px) {
+  .tab-links {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (width < 1200px) {
+  .software-testing-projects-buttons {
+    grid-template-columns: repeat(2, 300px);
+  }
+
+  .btn {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+@media (width < 600px) {
+  .software-testing-projects-buttons {
+    grid-template-columns: repeat(1, 300px);
+  }
+
+  .btn {
+    width: 300px;
   }
 }
