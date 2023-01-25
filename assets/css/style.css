@@ -86,6 +86,19 @@ header {
   justify-content: space-around;
 }
 
+.btn-download-cv {
+  padding-top: 3rem;
+  font-size: var(--small-font-size);
+}
+
+.btn-download-cv a {
+  transition: all 1s;
+}
+
+.btn-download-cv a:hover {
+  color: #ffc15e;
+}
+
 .my-photo {
   width: 35%;
   height: auto;
@@ -461,6 +474,13 @@ nav ul li a:hover {
   justify-content: center;
 }
 
+.programming-projects-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  grid-gap: 1rem;
+  justify-content: center;
+}
+
 /* --------- Contact --------- */
 .contact {
   padding: 5rem 0 2rem 0;
@@ -618,7 +638,8 @@ nav .fas {
 }
 
 @media (width < 600px) {
-  .software-testing-projects-buttons {
+  .software-testing-projects-buttons,
+  .programming-projects-buttons {
     grid-template-columns: repeat(1, 300px);
   }
 

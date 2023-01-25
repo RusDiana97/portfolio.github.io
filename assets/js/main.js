@@ -33,16 +33,14 @@ function closeMenu() {
 // SCROLL REVEAL ANIMATION
 const scrollRev = ScrollReveal({
   origin: "top",
-  distance: "30px",
+  distance: "20px",
   duration: 2000,
   reset: true,
 });
 
 scrollRev.reveal(
-  `nav, .logo, .side-menu, .my-photo, .subtitle, .header-description, 
-  .about-description, .tab-titles, .tab-links, .tab-contents, .portfolio-title, .portfolio-list, .btn-more,
-  .software-testing-projects-buttons, .btn, .contact-col`,
+  `.logo, .my-photo, .header-description, .about, .portfolio, .website-projects, .software-testing-projects, .databases-projects`,
   {
-    interval: 200,
+    interval: 300,
   }
 );
